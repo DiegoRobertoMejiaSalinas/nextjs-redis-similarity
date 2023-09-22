@@ -7,7 +7,6 @@ import { SignOutButton } from "./SignOutButton";
 import { buttonVariants } from "./ui/Button";
 import ThemeToggle from "./ThemeToggle";
 
-const session = false;
 interface NavbarProps {}
 
 const Navbar = async () => {
