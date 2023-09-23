@@ -1,9 +1,9 @@
 "use client";
 
 import { FC, useState } from "react";
-import { signIn, signOut } from "next-auth/react";
-import { Button } from "./ui/Button";
-import { toast } from "./ui/toast";
+import { signOut } from "next-auth/react";
+import { Button } from "@/ui/Button";
+import { toast } from "@/ui/toast";
 
 interface SignOutButtonProps {}
 
@@ -26,7 +26,7 @@ const SignOutButton: FC<SignOutButtonProps> = ({}) => {
 
   return (
     <Button onClick={signOutWithGoogle} isLoading={isLoading}>
-      Sign in
+      Sign out
     </Button>
   );
 };
