@@ -1,10 +1,10 @@
 import { VariantProps, cva } from "class-variance-authority";
-import { FC, HTMLAttributes, forwardRef } from "react";
+import { ButtonHTMLAttributes, FC, HTMLAttributes, forwardRef } from "react";
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement>,
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean;
 }
@@ -45,7 +45,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
         ref={ref}
         disabled={isLoading}
-        className={cn(buttonVariants({ variant, size }))}
+        className={cn(buttonVariants({ variant, size, className }))}
       >
         {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
         {children}
